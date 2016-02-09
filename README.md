@@ -97,3 +97,21 @@ Dismath Portfolio by Gian Chung
 | ¬p v r |
 | ∴ q v r |
   - We also learned that sometimes, it is easier to prove something using truth tables than Logical Equivalances.
+
+## WEEK 4  
+  - This week, we learned about method or proofs. the proofs are listed below.
+1. Direct Proof 
+        - Assume that p is true to show that q must also be true.
+  2. Contraposition Proof
+        - Assume that the negation of q must be true.
+  3. Vacuous Proof 
+        - Show that p is false because → q  must be true when p is false.
+  4. Trivial Proof 
+        - Show that q is true, it follows that p → q must also be true. q → (p → q) 
+  5. Proof of Contradiction 
+        - Assume that the negation of p must be true.
+  6. Negation of Implication 
+        - "If p is true, then q is true" is the statement "There is at least one case where p is true and q is false."
+  7. Proof of Equivalence (Biconditionals) 
+        - (p ↔ q) = (p → q) → (q → p)
+- I am still trying to cope this topic. Even though we had exampples, it is still a little bit fuzzy.
