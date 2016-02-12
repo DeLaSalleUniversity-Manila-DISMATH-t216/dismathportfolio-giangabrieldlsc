@@ -115,3 +115,23 @@ Dismath Portfolio by Gian Chung
   7. Proof of Equivalence (Biconditionals) 
         - (p ↔ q) = (p → q) → (q → p)
 - I am still trying to cope this topic. Even though we had exampples, it is still a little bit fuzzy.
+
+## WEEK 5
+-This week, we solved more problems about methods or proofs.
+    - If _n_ is a positive integer, then _n_ is odd if and only if _n^2_ is odd.
+    - For any natural number _n_, _n_ is even if and only if _n^2_ is even.
+    - Show that these statements about the integer _n_ are equivalent:
+        - P1: _n_ is even
+        - P2: _n-1_ is odd
+        - P2: _n^2_ is even
+    - Prove or disprove the following theorem: 
+        - Every positive integer is the sum os the squares of two integers
+    
+* **MATHEMATICAL INDUCTION**
+    - We are given a sequence of propositions that we would like to prove.
+    - The sequence:
+        - _P(1) P(2) P(3) P(k) P(k+1)_
+    - Steps:
+        1. Basis step: _P(1)_ is shown to be true
+        2. Do the inductive step
+    - Example: Prove _P(n) = 1 + 2 + 3 + ... + n = n(n+1)/2_
