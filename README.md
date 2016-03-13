@@ -135,3 +135,187 @@ Dismath Portfolio by Gian Chung
         1. Basis step: _P(1)_ is shown to be true
         2. Do the inductive step
     - Example: Prove _P(n) = 1 + 2 + 3 + ... + n = n(n+1)/2_
+ 
+## WEEK 6
+This week, we have some sort of continuation to Sets lessons, which is called Cardinality, and a new topic about Functions.
+
+**Cardinality**
+ - The number of elements it contains
+ - If S is a set, we denote its cardinality by writing |S|
+ - Examples:
+   - |{a, b, c, d, e}| = 5
+   - |{{a, b}, {c, d, e, f, g}, {h}}| = 3
+   - |{1, 2, 3, 3, 3}| = 3
+   - |{n ∈ N| n < 137}| = 137 (Zero is counted)
+   
+   - |N| = ℵ₀ (Aleph-zero, aleph-naught, "infinity")
+   - |Even| = ℵ₀
+   - |ℤ| = ℵ₀
+
+**Function**
+ - Let A & B be sets. A function f from A to B is an assignment of **exactly one** element of B to each element of A
+ - We write f: A → B or f: A to B (Note: **to** is not an implication)
+    - A for domain
+    - B for Co-Domain (Can be called as **Range** when a particular subset B is connected from set A)
+ - Image:
+ 
+ - Examples:
+
+f(x) = x^2 (Domain
+x ∈ ℤ
+f: ℤ to ℤ+ (Co-domain; not shown)
+"Perfect Square" (Range; not shown)
+
+int floor (float x) {
+  }
+Domain: float x (float → ℝ) ℝ
+Range: int floor (int → ℤ) ℤ
+
+ - Types of Function:
+    - One-to-One (Injective) - ∀x∀y(f(x)=f(y) → x=y) and ∀x∀y(x≠y → f(x)≠f(y))
+    - Onto (Surjective) Range = Co-domain (and must be filled)
+    - One-to-one and Onto (Bijection)
+
+THE SUBMISSION OF THE "PROJECT, 0-0 (Individual)" IS DUE ON **MARCH 1, 2016**
+##WEEK 7:
+
+**Algorithm**
+
+ - This is a finite set of precise instructions for performing a computation or for solving a problem.
+ - Ex: Describe an algorithm for finding the maximum (largest) value in a finite sequence of integers.
+ 
+    Procedure: Find Max
+    Input: {a1, a2, ..., ai, ..., an}
+    Output: maximum, max
+
+          1. max = a1
+          2. for i: 2 to n
+          3.     if (max < ai)
+          4.         max = ai
+
+ - **Preconditions** - Statements that describe valid input
+    - Ex: (a1, a2, : : :, an) ∈ ℤ
+ - **Postconditions** - Conditions that the ouput should satisfy when the program has run
+    - Ex: Output: max is the largest element
+
+ - Properties of Algorithm:
+    - Input - An algorithm has input values from a specified set (set for the *Precondition*)
+    - Output - From each set of input values an algorithm produces output values from a specified set (set for the *Postcondition*)
+    - Definiteness - The steps of an algorithm must be defined precisely
+    - Correctness - An algorithm should produce the correct output values for each set of input values
+    - Finiteness - An algorithm should produce the desired output after a finite number of steps
+    - Generality - The procedure should be applicable for all problems of the desired form, not just for a particular set of input
+ 
+ - **Pseudocode** - A detailed step in the process of developing an algorithm
+
+ - **Searching Algorithms**
+    - The problem of locating an element in an ordered list
+    - Locate an element x in a list of distinct elements a1, a2,..,an, or determine that is is not in the list
+    
+    - Types of Searching Algorithms:
+
+ Linear Algorithm
+
+          Procedure: Linear Search
+          Input: {a1, a2, ..., ai, ..., an}
+                 (x: searched element)
+          Output: location, loc
+                   {1, ..., n}
+                   { = -1 if not found}
+
+           1. loc = -1
+           2. for i: 1 to n
+           3.     if (x==ai)
+           4.         loc = i
+           
+           OR
+          
+           1. i = 1
+           2. while (i ≤ n ∧ x ≠ y)
+           3.        i = i + 1
+           4. if (i ≤ n)
+           5.     loc = i
+           6. else loc = -1
+
+ Binary Algorithm
+ 
+           Procedure: Binary Search
+           Input: {a1, a2, ..., ai, ..., an}
+                   (x: searched element)
+           Output: location, loc
+ 
+           1. i = 1
+           2. j = n
+           3. while ( i < j) {
+           4.        mid = (i + j)/2
+           5.        if (x > mid)
+           6.            i = mid + 1
+           7.        else j = mid }
+           8.  if (x==ai)
+           9.  loc = i
+           10. else loc = -1
+ 
+##WEEK 8:
+
+This week we continues our topic we have discussed last week. Here are more examples of the algorithms that are needed to be thoroughly remembered and understand in order to figure out the specific procedures.
+
+ - **Sorting Algorithms** - The algorithm of putting elements in increasing (or decreasing) order
+
+Bubble Sort
+
+          Procedure: Bubble Sort
+          Input: {a1, a2, ..., ai, ..., an}
+          Output: (x1, x2, ..., xi, ..., xn)
+                   x1 < x2 < ... < xn
+ 
+          1. for j: 1 to n-1
+          2.   for i: 1 to n-j
+          3.       if (ai > ai + 1)
+          4.         swap (ai, ai + 1)
+          OR basically what it means:
+          [temp = ai]
+          [ai = ai + 1]
+          [ai + 1 = temp]
+
+
+Insertion Sort
+
+          Procedure: Insertion Sort
+          Input: {a1, a2, ..., ai, ..., an}
+          Output: (x1, x2, ..., xi, ..., xn)
+                   x1 < x2 < ... < xn
+
+          1. for j = 2 to n
+          2. {
+          3. i = 1
+          4.   while aj > ai
+          5.     i = i + 1
+          6.     m = aj
+          7.     for k = 0 to j – i – 1
+          8.       aj–k = aj–k–1
+          9.      ai = m
+          10. }
+
+
+ - **Greedy Algorithm** - Selects the best choice at each step, instead of considering all sequences of steps that may lead to an optimal solution
+
+Example: Find a change and number of coins for 68 cents.
+
+P, N, P, Q
+1, 1, 1, 2
+
+Denomination:
+
+C = { 25, 10, 5, 1}
+x = amount
+
+          Procedure: Greedy Algorithm
+          Input: C = { 25, 10, 5, 1}, which is {c1, c2, ..., ci, ..., cn}
+                 x: amount
+          Output: number of coins, n
+
+          1. n = 0
+          2. for i: 1 to 4 (or any var)
+          3.    while (x ≥ ci)
+          4.      x = x - ci
+          5.      n = n + 1
