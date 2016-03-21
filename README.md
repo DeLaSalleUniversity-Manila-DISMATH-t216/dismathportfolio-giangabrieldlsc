@@ -319,3 +319,114 @@ x = amount
           3.    while (x ≥ ci)
           4.      x = x - ci
           5.      n = n + 1
+## **Week 9:**
+* The continuation of the lesson, Algorithm:
+	* Algorithm 3:
+	
+			Bubble Sort
+			
+			Input: {A1,A2,.....,Ai,....An} ∈ all real numbers, n>=2
+			Output: {X1,X2,....,Xi,...,Xn} where X1<X2<.....<Xn
+			for j=1 to n-1
+				for i=1 to n-j
+					if(Ai>A(i+1))
+					swap(Ai,A(i+1))
+
+	* Algorithm 4:
+	
+			Insertion Sort
+			
+			Input:{A1,A2,.....,Ai,....An} ∈ n>=2
+			for j=2 to n
+			{
+				i=1
+				while Aj>Ai
+					i=i+1
+				m=Aj
+				for k=0 to j-i-1
+					A(j-k)=A(j-i-1)
+				Ai=m
+			}
+			Output: {X1,X2,X3,....,Xn:increasing order}
+
+		* Outer for-loop is responsible of the sorting.
+		* Inner for-loop is responsible for swapping.
+
+	* Algorithm 5:
+	
+			Greedy Algorithm
+			- selects the best choice at each step, instead of considering all sequences of steps that may lead to an optional solution.
+			- applied in optimization problems where a solution to the given problem either minimizes or maximizes the value of some parameter.
+			
+			Denomination 
+				C={25,10,5,1}
+				x=amount of memory
+			for i=1 to r
+				x=0
+			while (x≥Ci)
+				x=x-Ci
+				n=n+1
+
+## **Week 10:**
+* This week, we were introduced to growth of functions.
+	* Using Big-O, Big-Ω and Big-ϴ
+	* In Big-O, we are looking for the upper bound size of f(x).
+	* In Big-O, let f and G be functions from Real numbers to Real numbers where f(x) is O(g(x)) if there are constants C and k such that:
+	
+			|f(x)| ≤ C|g(x)| where x > k
+			C and k are the witnesses of Big-O
+
+		* Example:
+			
+				x^2 + 2x + 1 is O(x^2) 
+				x^2 + 2x + 1 is O(x^3)
+				x^2 + 2x + 1 is O(x^4)
+
+	* Same as in Big-Ω, but in this function, we are looking for the lower bound of f(x).
+	
+		* Example:
+		
+				x^2 + 2x + 1 is Ω(x^2)
+				x^2 + 2x + 1 is Ω(x)
+
+	* Lastly, in Big-ϴ, we are looking for both the lower and upper bound size of f(x).
+	
+		* Example:
+		
+				x^2 + 2x + 1 is ϴ(x^2)
+
+		* There is only one answer in Big-ϴ.
+
+* Next, Time Complexity in Algorithm, and Division and Modulo Operator
+	
+	* Time Complexity
+		* can be expressed in terms of the number of operations used by the algorithms.
+		* number of comparisons will be used as the measure of the time complexity.
+	
+		| Complexity | Terminology |
+		| :---: | :---: |
+		| ϴ(1) | constant complexity |
+		| ϴ(logn) | log complexity |
+		| ϴ(n) | linear complexity |
+
+		* Time complexity of finding max comparison: 2n-1, ϴ(n)
+		* Time complexity of linear search: 2n+2, ϴ(n)
+	
+	* Division and Modulo
+	
+			* Example:
+				Let a = integer, d = positive integer
+				Unique integers Q and r
+					with 0<=r<d such that a=dQ+r
+				9 mod 2 = 1 (r)
+				9 div 2 = 4 (Q)
+				a=d*Q+r
+				a=2*4+1
+				a=9
+
+	* Last topic for quiz 2 was Ceasar Cipher.
+	
+			* How can you make your message secret?
+				Example:
+				LOVE = ORYH
+				(p+3) mod 26
