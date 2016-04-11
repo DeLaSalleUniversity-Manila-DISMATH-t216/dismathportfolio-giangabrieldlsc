@@ -430,3 +430,300 @@ x = amount
 				Example:
 				LOVE = ORYH
 				(p+3) mod 26
+## **WEEK 11:**
+
+**Graph Theory**
+
+- Graphs - Discrete structures consisting of vertices and edges that connect these vertices.
+
+Example:
+
+
+
+ - A graph G = (V, E)  consist of V, a nonempty set of vertices (or nodes), and R, a set of edges. Each edge has either one or two verices associated with it, called its endpoints.
+ 
+Using the example above:
+
+G = (V, E)
+V = {L, R, I, O}
+E = {(L, R), (L, I), (I, O), (O, R), (I, R)}
+
+Example 2:
+
+
+
+
+G = (V, E)
+V = {L, R, I, *G*}
+E = {...} ( G is not connected therefore not included in the edges)
+
+Basic Terminology:
+
+ - The degree of a vertex in an udirected graph is the number of edges incident with it, except that a loop at a vertex contributes twice to the degree of that vertex.
+
+Handshaking Theorem:
+
+ - Let G = (V, E) be an undirected graph with e edges, then
+    - 2e = ∑deg(v), where
+        - v = vertices
+        - deg = degrees of the vertices
+        - e = edges
+
+Example: How many edges are there in the graph with 10 vertices each of degree six?
+
+          2e = ∑deg(v)
+          2e = 6(10)
+          2e = 60
+          e = 30
+       There are total of 30 edges in the graph with 10 vertices with a degree of 6 each.
+
+
+- A subgraph of a graph G = (V, E) is a graph H = (W, F), where W ⊆ V and F ⊆ E. A subgraph H of G is a proper subgraph of G if H ≠ G.
+- Example: 
+
+G1 subgraph G
+
+G = {V, E}
+G1 = {G1, E1}
+
+V1 ⊆ V
+E1 ⊆ E
+
+V1 = {G, J}
+E1 = {(G, J), (J,G)}
+
+- The Union of the two simple graphs G1 = (V1, E1) and G2 = (V2, E2) is the simple graph with the vertex set V1 ∪ V2 and the edge set E1 ∪ E2.
+
+
+
+- The Intersection of the two simple graphs G1 = (V1, E1) and G2 = (V2, E2) is the simple graph with the vertex set V1 ∩ V2 and the edge set E1 ∩ E2.
+
+
+
+**Paths(Route)**
+
+- A path is a sequence of edges the begins on one vertex.
+
+Euler Circuit and Paths:
+
+- Euler Circuit
+    - Covers all the **edges** by crossing the path once and only once; begins and ends with the same vertex.
+    - All vetices(nodes) have **even** degrees.
+- Euler Path
+    - Covers all the **edges** by crossing the path once and only once; starts at one vertex but ends on a different vertex.
+    - **Exactly two** vertices(nodes) have **odd** degrees.
+
+Examples:
+
+G1 = Euler Path
+G2 = Euler Path
+G3 = None
+
+Hamilton Paths and Circuits:
+
+- Hamilton Circuit
+    - Covers all the **vertices** by crossing the path once and only once; begins and ends with the same vertex.
+    - (It is usually found on closed circuits)
+- Hamilton Path
+    - Covers all the **vertices** by crossing the path once and only once; starts at one vertex but ends on a different vertex.
+    - (It is possible if the circuit is open; it can have a pendant)
+
+**Matrices of Graphs**
+
+ai = 
+- **1** if (vi, vj) has a connection
+- **0** if otherwise
+
+Example:
+
+
+
+
+Matrix
+
+0 1 1 1
+1 0 1 0
+1 1 0 0
+1 0 0 0
+
+**Isomorphism of Graphs** 
+
+- Graph G = Graph H
+- If and only if V1 = V2 and E1 = E2 by connection or pinpointing the location each of the vertices
+- They should have the same number of vertices and edges
+
+Example:
+
+
+
+
+
+G = H
+U1 <=> V1
+U2 <=> V4
+U3 <=> V3
+U4 <=> V2
+
+
+**Planar Graphs**
+
+(Untangle the rope)
+
+- No edges and vertices should cross or intersect
+- The **tangles** can be removed
+
+- Kuratowski's Theorem:
+    - The graph is non-planar if the subgraph of the graph is K5 or K3,3
+
+**Euler's Formula:**
+
+       r = e - v + 2
+
+
+##**WEEK 12:**
+
+Last time on Kuratowski's Theorem...
+
+- Is the Petersen graph shown planar?
+    - No
+- Is it a K3,3 or K5?
+    - K3,3
+
+Techniques to determine the correct subset in Kuratowski's Theorem:
+
+- Technique 1: Compare the degrees of each vertices on both comparing graphs. If they have the same number of degrees, it is most likely that's the subgraph of one of the non-planar graphs (K3,3 when the degrees of each vertices is 3, and K5 when it's 5).
+- Technique 2: To check if it is the correct non-planar subgraph, try to delete and compare the similarities by rearranging the vertices. Also, there will be times that there are more vertices, but it can form the figure of the subgraph, thus the graph formed is homeomorphic.
+
+
+Homeomorphic graph - can be obtained from the same graph by elementary subdivision.
+- Elementary Subdivision - remove the necessary vertex between the two vertices that needs to be connected, add the edge that needs to be connected.
+
+**Graph Coloring**
+
+Consider a map (found on the powerpoint)
+
+c(G)= 4 (Chromatic Value)
+
+Euler Circuit - Linear
+Chromatic Number - Expenential
+
+    - Technique - Biparite (K3,3) = 2 colors
+
+Four Color Theorem:
+
+- When planar, max color = 4
+
+    - Technique - Kn = n (Parites)
+    - Technique - Codd = 3, Ceven = 2 (Circles)
+    - Sn = 2 (Stars)
+    - Wodd = 3, Weven = 4 (Wheels)
+
+**Trees**
+
+- A tree is connected undirected graph with no simple circuits
+- In a proper organized uprooted tree:
+    - The topmost part is the root
+    - The lowest parts are the children
+
+Why Study Tees
+
+- Binary Search
+- Data Transmission and Storage
+- Huffman Coding
+
+Examples found the slides (Answers)
+
+- G1
+- G2
+- G4 (is called *forest*)
+
+A tree is a subset to a connected graph
+
+*Rooted Trees:*
+
+- Internal Vertices - vertices w/ children
+- Leaves - vertices w/o children
+ 
+*M-ary Tree:*
+
+- A tree with uniform children
+ 
+*Ordered rooted tree:*
+
+- A rooted tree where the children of each internal vertex are ordered.
+
+Properties of Trees:
+
+- A tree with n vertices has **n - 1** edges.
+- A full m-ary tree with i internal vertices contains **n = mi + 1** vertices.
+- A full m-ary tree with:
+    - **n** vertices has **i = (n - 1)/ m** internal vertices and **l = [(m - 1)n + 1 ]/ m** leaves,
+    - **i** internal vertices has **n = mi + 1** vertices and **I = (m - 1)i + 1** leaves,
+    - **l** leaves has **n = (ml - 1 )/(m - 1)** vertices and **i = (l - 1 )/(m - 1)** internal vertices.
+
+- Example: (Answers)
+    - leaves = l = 100
+    - m-ary = m = 4
+    - Using the Case III property:
+       - n = (399)/(3) = 133 total people seen it
+       - i = (99)/(3) = 33 sent the letter
+
+**Modeling Computation**
+
+Given a task, two questions arise.
+
+- Can it be carried out using a computer?
+- If yes, how can the task be carried out?
+
+*IBM Deep Blue vs Kasparov**
+
+Types of modeling computation:
+
+- Grammars
+- Finite Machine
+- Turring Machine
+ 
+*Grammars* 
+- are used to generate the words of a language and to determine whether a word is in a language
+- formal languages, which are generated by grammars, provide models for both natural languages, such as English, and for programming languages, such as Pascal, Prolog, Co, and Java
+- They are extremely important in the construction and theory of compilers
+
+- Compiler - a program that reads a program written in a source language and traslates it into an equivalent program in a target language
+ 
+
+Syntax vs. Semantics
+- The syntax of a natural language is extremely complicated
+- In computation, formal language...
+
+Language and Grammars 
+
+- Construct a derivation tree
+    - Vocabulary
+    - Word
+    - Derivation or Parse Tree
+
+Automata Theory:
+
+- Studies the laws of the computation
+- Compose of State
+
+- Finite Automation - provides the simpliest model of a computing device
+    - Example: Used in Lexical Analyzers
+  
+        mkcz is a legal name
+        69u is not
+
+
+*Finite-State Machine*
+
+M = (S, I, O, f, g, s0)
+
+S - states (sets)
+I - input alphabets (input)
+O - output alphabets (ouput)
+f - transition function (arrows)
+g - output function
+s0 - initial states
+
+- That ends our class in DISMATH
+- We also have an app that is due on Wednesday April 13, 2016
